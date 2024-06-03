@@ -17,7 +17,7 @@ public:
     bool isSubsequence(string s, string t) {
         int m = t.size(), n = s.size();
 
-        // dp[i][j]: t 中 i- 1 和 s 中 j- 1 的相同子序列
+        // dp[i][j]: t 中 i- 1 和 s 中 j- 1 的相同子序列的【能够匹配的子序列个数】个数
         vector<vector<int>> dp(m + 1, vector<int>(n + 1, 0));
 
         for (int i = 1; i <= m; ++i) {

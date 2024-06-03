@@ -40,7 +40,7 @@ public:
             if (sum_flag.find(cur_sum) != sum_flag.end()) {
                 return false;
             }
-            sum_flag.insert(cur_sum);
+            sum_flag.insert(cur_sum);  // 之前是否出现过了：出现了环
         }
     }
 };

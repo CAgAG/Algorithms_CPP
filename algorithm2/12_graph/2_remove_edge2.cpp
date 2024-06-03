@@ -5,6 +5,8 @@
  * @date   : 2024/4/27 20
  *************************/
 
+// 【树】就是 最少边【连通】的 图
+
 #include "iostream"
 #include "vector"
 #include "algorithm"

@@ -36,10 +36,11 @@ public:
         }
 
         for (int i = start_index; i < s.size(); ++i) {
+            // 只对回文子串 回溯
             if (check(s, start_index, i)) {
                 string sub_s = s.substr(start_index, i - start_index + 1);
-                path.push_back(sub_s);
 
+                path.push_back(sub_s);
                 backtrace(s, i + 1);
                 path.pop_back();
             }

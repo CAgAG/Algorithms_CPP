@@ -4,6 +4,7 @@
  * @note   : 最大子序和 https://leetcode.cn/problems/maximum-subarray/description/
  * @date   : 2024/4/9 11
  *************************/
+// 最大和的连续子数组
 
 #include "iostream"
 #include "vector"
@@ -23,7 +24,7 @@ public:
             }
             // 和 尽可能大于 0
             // 否则 重置
-            if (cur_max_sum < 0) {
+            if (cur_max_sum < 0) {  // 负数就重置
                 cur_max_sum = 0;
             }
         }

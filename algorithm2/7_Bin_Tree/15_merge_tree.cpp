@@ -4,6 +4,7 @@
  * @note   : 合并二叉树 https://leetcode.cn/problems/merge-two-binary-trees/description/
  * @date   : 2024/3/15 11
  *************************/
+// 合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则不为 NULL 的节点将直接作为新二叉树的节点。
 
 #include "iostream"
 #include "vector"
@@ -49,8 +50,8 @@ public:
             ret_root->left = traversal(root1->left, nullptr);
             ret_root->right = traversal(root1->right, nullptr);
         } else {
-            ret_root->left = traversal(root1->left, root2->left);
-            ret_root->right = traversal(root1->right, root2->right);
+            ret_root->left = traversal(root1->left, root2->left);  // 一起向左
+            ret_root->right = traversal(root1->right, root2->right);  // 一起向右
         }
 
         return ret_root;

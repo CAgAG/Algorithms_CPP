@@ -1,4 +1,4 @@
-/*************************
+/************************* key
  * @file   : 20_shortest_same_father_node.cpp
  * @encode : UTF-8
  * @note   : 二叉树的最近公共祖先 https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/description/

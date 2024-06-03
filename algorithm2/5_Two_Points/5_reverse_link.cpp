@@ -34,9 +34,10 @@ public:
 
         while (cur_node != nullptr) {
             ListNode *tp = cur_node->next;
-            cur_node->next = pre_node;
 
+            cur_node->next = pre_node;
             pre_node = cur_node;
+
             cur_node = tp;
         }
         head->next = nullptr;

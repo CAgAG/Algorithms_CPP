@@ -4,6 +4,7 @@
  * @note   : 摆动序列 https://leetcode.cn/problems/wiggle-subsequence/description/
  * @date   : 2024/4/8 20
  *************************/
+// 【连续数字】之间的【差值】严格地在【正数】和【负数】之间交替，则数字序列称为摆动序列
 
 #include "iostream"
 #include "vector"
@@ -23,7 +24,7 @@ public:
 
         for (int i = 0; i < nums.size() - 1; ++i) {
             cur_diff = nums[i + 1] - nums[i];
-            // 摆动序列
+            // 局部是摆动序列
             if ((pre_diff <= 0 && cur_diff > 0) || (pre_diff >= 0 && cur_diff < 0)) {  // 通过 与 和 或 来控制交错的顺序
                 ret++;
                 // 只在摆动变化的时候更新 pre_diff

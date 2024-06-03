@@ -24,7 +24,7 @@ public:
         for (int it: nums2) {
             if (map.find(it) != map.end() && map[it]) {
                 ret.push_back(it);
-                map[it] = false;
+                map[it] = false;  // 只添加一次
             }
         }
         return ret;

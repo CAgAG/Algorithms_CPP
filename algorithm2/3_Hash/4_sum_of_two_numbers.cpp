@@ -22,7 +22,7 @@ public:
             if (map.find(target - it) != map.end()) {  // 直接对答案进行搜索
                 return {map[target - it], i};
             }
-            map[it] = i;
+            map[it] = i;  // 存储 ==> 数值：索引
         }
         return {};
     }

@@ -34,7 +34,7 @@ public:
 
         pre_node->next = nullptr;  // 注意将头节点的下一个置为 null 表示结束
         while (cur_node != nullptr) {
-            ListNode *tp = cur_node->next;
+            ListNode *tp = cur_node->next;  // 重点是保存当前节点的 下一个节点
             cur_node->next = pre_node;
 
             pre_node = cur_node;

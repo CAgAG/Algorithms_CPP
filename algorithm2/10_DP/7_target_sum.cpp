@@ -1,7 +1,7 @@
 /*************************
  * @file   : 7_target_sum.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 目标和 https://leetcode.cn/problems/target-sum/description/
  * @date   : 2024/4/23 10
  *************************/
 

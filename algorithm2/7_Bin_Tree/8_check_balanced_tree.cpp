@@ -1,9 +1,10 @@
-/*************************
+/************************* key
  * @file   : 8_check_balanced_tree.cpp
  * @encode : UTF-8
  * @note   : 平衡二叉树 https://leetcode.cn/problems/balanced-binary-tree/
  * @date   : 2024/3/10 14
  *************************/
+// 一棵高度平衡二叉树定义为：一个二叉树每个节点 的左右两个子树的高度差的绝对值不超过1
 
 #include "iostream"
 #include "vector"
@@ -29,6 +30,7 @@ struct TreeNode {
 class Solution {
 public:
     // -1 表示已经不是平衡二叉树了，否则返回值是以该节点为根节点树的高度
+    // 返回值就是当前遍历树的状态
     int get_height(TreeNode *root) {
         if (root == nullptr) {
             return 0;

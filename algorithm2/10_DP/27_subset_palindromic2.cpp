@@ -29,7 +29,7 @@ public:
             for (int j = i + 1; j < n; ++j) {
                 if (s[i] == s[j]) {
                     // i, [i+1, j-1], j
-                    dp[i][j] = dp[i + 1][j - 1] + 2;
+                    dp[i][j] = dp[i + 1][j - 1] + 2;  // 范围扩大
                 }
                 if (s[i] != s[j]) {
                     // 删除 i 元素

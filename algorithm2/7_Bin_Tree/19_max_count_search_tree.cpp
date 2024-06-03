@@ -32,13 +32,15 @@ struct TreeNode {
 class Solution {
 public:
     int num_count = 0;
-    int max_num_count = 0;
+    int max_num_count = 0;  // 记录可能的众数
 
+    // pre_node: 上一个最大的众数
     void traversal(TreeNode *root, TreeNode *&pre_node, vector<int> &ret) {
         if (root == nullptr) {
             return;
         }
-
+        // 中序遍历
+        // 相同的数是邻近的
         traversal(root->left, pre_node, ret);
         // 第一个节点
         if (pre_node == nullptr) {

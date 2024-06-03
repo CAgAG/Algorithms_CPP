@@ -14,6 +14,7 @@ using namespace std;
 
 class Solution {
 public:
+    // 模拟
     int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {
         int ret = -1;
         for (int start_index = 0; start_index < gas.size(); ++start_index) {
@@ -21,7 +22,7 @@ public:
             bool first_flag = true;
             for (int i = start_index; i < gas.size(); i %= gas.size()) {
                 // 可达
-                if (!first_flag && i == start_index) {
+                if (!first_flag && i == start_index) {  // 已进行一周，结束
                     ret = start_index;
                     break;
                 }

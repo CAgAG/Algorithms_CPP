@@ -4,6 +4,7 @@
  * @note   : 柠檬水找零 https://leetcode.cn/problems/lemonade-change/description/
  * @date   : 2024/4/15 14
  *************************/
+ // 局部贪心 + 模拟
 
 #include "iostream"
 #include "vector"

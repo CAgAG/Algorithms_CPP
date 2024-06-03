@@ -21,7 +21,7 @@ public:
         vector<vector<int>> dp(n + 1, vector<int>(n + 1, 0));
 
         int ret = 0;
-        for (int i = 1; i <= nums1.size(); ++i) {
+        for (int i = 1; i <= nums1.size(); ++i) {  // 判断条件都是等号
             for (int j = 1; j <= nums2.size(); ++j) {
                 if (nums1[i - 1] == nums2[j - 1]) {  // 找到相等的字符
                     dp[i][j] = dp[i - 1][j - 1] + 1;  // 一起回退到上一个的 最长重复子数组长度

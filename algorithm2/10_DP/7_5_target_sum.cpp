@@ -5,6 +5,10 @@
  * @date   : 2024/4/23 10
  *************************/
 
+// 这次和之前遇到的背包问题不一样了，之前都是求容量为j的背包，最多能装多少。
+// 本题则是装满有几种方法。其实这就是一个组合问题了。
+// 装满容量为x的背包，有几种方法
+
 #include "iostream"
 #include "vector"
 #include "algorithm"
@@ -42,6 +46,7 @@ public:
         dp[0] = 1;
         for (int i = 0; i < nums.size(); i++) {
             for (int j = bag_weight; j >= nums[i]; j--) {
+                // ==> 01 组合(方法)数 计算公式，【没有最多的要求】
                 dp[j] = dp[j] + dp[j - nums[i]];
                 // cout << j << ", " << j - nums[i] << endl;
                 /* dp[j] 选择物品 nums[i] 加入背包

@@ -29,11 +29,13 @@ public:
         }
 
         for (int i = start_index; i < nums.size(); ++i) {
+            // 去重
             if (i > 0
                 && nums[i] == nums[i - 1]
                 && used[i - 1] == false) {
                 continue;
             }
+            // 符合条件
             if (!path.empty() && nums[i] < path[path.size() - 1]) {
                 continue;
             }

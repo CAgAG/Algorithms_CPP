@@ -20,13 +20,15 @@ public:
             return 0;
         }
 
+        // 历史可达的最大距离
         int cur_distance = 0;
         int ret = 0;
-        int next_distance = 0;
+        int next_distance = 0;  // 当前到 历史可达的最大距离之间，动态可达的最大距离
         for (int i = 0; i < nums.size(); ++i) {
             // 到 cur_distance 之前, 能够到达的最大距离
             next_distance = max(nums[i] + i, next_distance);
             if (i == cur_distance) {
+                // 更新历史可达的最大距离
                 cur_distance = next_distance;
                 ret++;
                 if (next_distance >= nums.size() - 1) {

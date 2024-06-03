@@ -18,7 +18,8 @@ public:
         int bag_weight = amount;
         vector<int> dp(bag_weight + 1, 0);
         dp[0] = 1;
-        /* 先物品再背包是 组合数
+        /* 使用完全背包求 组合、排列数
+         * 先物品再背包是 【组合数】
          * 先背包再物品是 排列数
          */
         for (int i = 0; i < coins.size(); ++i) {
@@ -34,10 +35,10 @@ public:
         vector<int> dp(bag_weight + 1, 0);
         dp[0] = 1;
         /* 先物品再背包是 组合数
-         * 先背包再物品是 排列数
+         * 先背包再物品是 【排列数】
          */
-        for (int j = 0; j <= bag_weight; ++j) {
-            for (int i = 0; i < coins.size(); ++i) {
+        for (int j = 0; j <= bag_weight; ++j) {  // 遍历背包
+            for (int i = 0; i < coins.size(); ++i) {  // 【重新】遍历物品
                 if (j - coins[i] >= 0) {
                     dp[j] = dp[j] + dp[j - coins[i]];
                 }

@@ -17,7 +17,7 @@ public:
     int numTrees(int n) {
         if (n <= 1) return 1;
 
-        // dp[i]: 到i一共有多少数
+        // dp[i]: 到i一共有多少树
         vector<int> dp(n + 1, 0);
         dp[0] = 1;
         dp[1] = 1;

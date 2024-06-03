@@ -4,7 +4,6 @@
  * @note   : 分发糖果 https://leetcode.cn/problems/candy/description/
  * @date   : 2024/4/14 22
  *************************/
-
 // 评分相等可以不管给多给少糖果
 
 #include "iostream"
@@ -12,6 +11,9 @@
 #include "algorithm"
 
 using namespace std;
+
+// 每个孩子至少分配到 1 个糖果。
+// 相邻的孩子中，评分高的孩子必须获得更多的糖果。
 
 class Solution {
 public:

@@ -35,12 +35,13 @@ public:
         string last_from_p = ret[ret.size() - 1];
         for (pair<const string, int> &target: targets[last_from_p]) {
             // 记录到达机场是否飞过了
-            if (target.second > 0) {
+            if (target.second > 0) {  // 没飞过（还可以飞）
                 string to_p = target.first;
 
                 ret.push_back(to_p);
-                target.second--;
-                backtrace(ticketNum, ret);
+                target.second--; // 已飞过一次
+
+                // backtrace(ticketNum, ret);
                 if (backtrace(ticketNum, ret)) {
                     return true;
                 }

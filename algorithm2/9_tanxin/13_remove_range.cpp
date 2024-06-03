@@ -14,6 +14,7 @@ using namespace std;
 
 class Solution {
 private:
+    // 左区间点排序
     static bool cmp(const vector<int> &a, vector<int> &b) {
         return a[0] < b[0];
     }

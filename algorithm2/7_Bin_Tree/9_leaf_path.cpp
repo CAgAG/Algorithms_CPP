@@ -28,19 +28,6 @@ struct TreeNode {
 
 class Solution {
 public:
-    void traversal(TreeNode *root, vector<int> &path, vector<vector<int>> &paths) {
-        if (root == nullptr) {
-            return;
-        }
-        path.push_back(root->val);
-        // 叶子节点
-        if (root->left == nullptr && root->right == nullptr) {
-            paths.push_back(vector<int>(path.begin(), path.end()));
-        }
-        traversal(root->left, path, paths);
-        traversal(root->right, path, paths);
-        path.pop_back();
-    }
 
     void traversal2(TreeNode *root, vector<int> &path, vector<vector<int>> &paths) {
         path.push_back(root->val);
@@ -58,6 +45,21 @@ public:
             traversal2(root->right, path, paths);
             path.pop_back();
         }
+    }
+
+    // =================================================================
+    void traversal(TreeNode *root, vector<int> &path, vector<vector<int>> &paths) {
+        if (root == nullptr) {
+            return;
+        }
+        path.push_back(root->val);
+        // 叶子节点
+        if (root->left == nullptr && root->right == nullptr) {
+            paths.push_back(vector<int>(path.begin(), path.end()));
+        }
+        traversal(root->left, path, paths);
+        traversal(root->right, path, paths);
+        path.pop_back();
     }
 
     vector<string> binaryTreePaths(TreeNode *root) {

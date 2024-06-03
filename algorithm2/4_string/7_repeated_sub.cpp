@@ -38,7 +38,9 @@ public:
         getNext(next, s);
 
         int len = s.size();
-        if (next[len - 1] != 0 && len % (len - next[len - 1]) == 0) {
+        if (next[len - 1] != 0 &&  // 能不能找到对应的前缀
+            len % (len - next[len - 1]) == 0) {  // 数组长度减去最长相同前后缀的长度相当于是第一个周期的长度，也就是一个周期的长度，如果这个周期可以被整除，就说明整个数组就是这个周期的循环。
+            // abcabc【abcabc】  ==> 一个周期
             return true;
         }
         return false;

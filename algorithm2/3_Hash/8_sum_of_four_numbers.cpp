@@ -47,10 +47,11 @@ public:
                         left_index++;
                     } else {
                         ret.push_back({a, b, c, d});
-                        // 去重
+                        // 去重, 分别移动(去重) left_index 和 right_index 的区间
                         while (left_index < right_index && nums[left_index] == nums[left_index + 1]) left_index++;
                         while (left_index < right_index && nums[right_index] == nums[right_index - 1]) right_index--;
 
+                        // 缩小区间
                         left_index++;
                         right_index--;
                     }

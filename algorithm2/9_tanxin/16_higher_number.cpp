@@ -19,9 +19,10 @@ public:
         // 从哪一位开始全部赋值为 9
         int flag = s.size();
         for (int i = s.size() - 1; i > 0; --i) {
+            // 左边比右边大
             if (s[i - 1] > s[i]) {
-                s[i - 1]--;
-                flag = i;
+                s[i - 1]--;  // 左边大的数 减一，减一是为了延续 ‘9’
+                flag = i;  // 右边小的 标记为 9
             }
         }
         for (int i = flag; i < s.size(); ++i) {

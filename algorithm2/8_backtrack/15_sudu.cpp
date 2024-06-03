@@ -49,7 +49,7 @@ public:
     bool backtrace(vector<vector<char>> &board) {
         for (int i = 0; i < board.size(); ++i) {
             for (int j = 0; j < board[i].size(); ++j) {
-                if (board[i][j] != '.') {
+                if (board[i][j] != '.') {  // 已填充数字
                     continue;
                 }
                 for (char c = '1'; c <= '9'; ++c) {

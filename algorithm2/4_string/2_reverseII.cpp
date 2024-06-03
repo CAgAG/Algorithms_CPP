@@ -21,7 +21,7 @@ public:
             // 1. 每隔 2k 个字符的前 k 个字符进行反转
             // 2. 剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符
             if (i + k < ret.size()) {
-                reverse(ret.begin() + i, ret.begin() + i + k);
+                reverse(ret.begin() + i, ret.begin() + i + k);  // 2k之后的k个字符必翻转
             } else {
                 reverse(ret.begin() + i, ret.end());
             }

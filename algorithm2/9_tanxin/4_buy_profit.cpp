@@ -1,5 +1,5 @@
 /*************************
- * @file   : 4_buy_profit.cpp
+ * @file   : 4_buy_profit.cpp 建议使用 动态规划 解决
  * @encode : UTF-8
  * @note   : 买卖股票的最佳时机 II https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-ii/description/
  * @date   : 2024/4/10 12

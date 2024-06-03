@@ -22,11 +22,11 @@ public:
         dp[1] = 1;
 
         for (int i = 1; i < n; ++i) {
-            for (int j = i; j <= n; ++j) {
+            for (int j = i; j <= n; ++j) {  // 对于每一个 i，j是会重复出现的
                 // i * (j - i)):  单纯的把整数拆分为两个数相乘
                 // dp[j - i] * i: 遍历之前的结果
                 // dp[j]: 更新值
-                dp[j] = max(dp[j], max(dp[j - i] * i, i * (j - i)));
+                dp[j] = max(dp[j], max(dp[j - i] * i, (j - i) * i));
             }
         }
         return dp[n];

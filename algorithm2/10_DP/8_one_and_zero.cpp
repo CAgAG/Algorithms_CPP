@@ -46,7 +46,7 @@ public:
             // 遍历背包
             for (int i = m; i >= x; --i) {
                 for (int j = n; j >= y; --j) {
-                    dp[i][j] = max(dp[i][j], dp[i - x][j - y] + 1);
+                    dp[i][j] = max(dp[i][j], dp[i - x][j - y] + 1);  // 此时的价值就是物品的数量
                 }
             }
         }

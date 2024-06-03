@@ -32,6 +32,7 @@ public:
         if (node == nullptr) {
             return;
         }
+        // 左右孩子互换
         TreeNode *tp = node->left;
         node->left = node->right;
         node->right = tp;

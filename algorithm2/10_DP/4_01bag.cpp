@@ -46,6 +46,7 @@ void solve() {
                 // 如果能装下,就将值更新为 不装这个物品的最大值 和 装这个物品的最大值 中的 最大值
                 // 装这个物品的最大值由容量为j - weight[i]的包任意放入序号为[0, i - 1]的最大值 + 该物品的价值构成
             else dp[i][j] = max(dp[i - 1][j], dp[i - 1][j - weight[i]] + value[i]);
+            // dp[i - 1][j - weight[i]] 为背包容量为j - weight[i]的时候不放物品i的最大价值
         }
     }
     cout << dp[weight.size() - 1][bag_weight] << endl;

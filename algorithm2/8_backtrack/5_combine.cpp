@@ -17,6 +17,7 @@ private:
     vector<vector<int>> ret;
 
 public:
+    // 在搜索的过程中就去掉重复组合，如 【1，1，2】，target=3
     // candidates 是已经排序过的
     void backtrace(vector<int> &candidates, int target, int cur_sum, int start_index, vector<bool> &used) {
         if (cur_sum > target) {

@@ -13,6 +13,8 @@ using namespace std;
 class Solution {
 public:
     /* 时间复杂度为 O(n) */
+    // 双指针
+    // 从两边向中间 移动
     vector<int> sortedSquares(vector<int> &nums) {  // 数组其实是有序的, 那么数组平方的最大值就在数组的两端
         int left_point = 0, right_point = nums.size() - 1;  // 从两边找最大值
         vector<int> ret(nums.size());  // ret 的最后一位始终是最大的数

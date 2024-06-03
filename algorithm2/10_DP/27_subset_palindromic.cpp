@@ -27,10 +27,10 @@ public:
         vector<vector<bool>> dp = vector(n + 1, vector<bool>(n + 1, false));
 
         int ret = 0;
-        for (int i = n - 1; i >= 0; --i) {
+        for (int i = n - 1; i >= 0; --i) {  // note: 从后向前
             for (int j = i; j < n; ++j) {
                 if (s[i] == s[j]) {  // i和j对应区间边界的元素相同
-                    if (j - i <= 1) { // 区间有1个或者2个元素
+                    if (j - i <= 1) { // 区间有1个或者2个元素，可以【百分百确定是 回文串 的情况】
                         dp[i][j] = true;
                         ret++;
                     } else if (dp[i + 1][j - 1] == true) { // i和j区间的里面是回文子串的情况, 注意此处是 i+1

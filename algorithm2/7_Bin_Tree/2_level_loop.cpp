@@ -44,7 +44,7 @@ public:
 
             TreeNode *cur_node;
             // 这里一定要使用固定大小 size，不要使用que.size()，因为que.size是不断变化的; 用于划分层节点数
-            for (int i = 0; i < que_size; ++i) {
+            for (int i = 0; i < que_size; ++i) {  // 将旧队列全部弹出
                 cur_node = que.front();
                 que.pop();
 

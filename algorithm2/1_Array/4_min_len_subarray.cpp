@@ -26,10 +26,10 @@ public:
                 int sub_length =  window_right - window_left + 1;
                 ret = min(ret, sub_length);
 
-                window_sum -= nums[window_left];
+                window_sum -= nums[window_left];  // 尝试缩小范围
                 window_left += 1;  // 参试移动左边的指针缩小范围
             }
-            window_right += 1;
+            window_right += 1;  // 下一个区间
         }
         return ret == INT32_MAX ? 0: ret;
     }

@@ -46,3 +46,25 @@
 - 堆排序
 - 归并排序
 
+**algorithm: 算法入门**
+
+- 动态规划
+- 最短路
+- 并查集
+- 贪心
+- 双指针
+- 图算法
+- 搜索
+- 二叉树相关
+
+**algorithm2: 算法实践**
+
+- 包含 **algorithm: 算法入门** 的全部以及拓展练习
+- 哈希
+- 栈和队列的互相模拟, 及其应用
+- 回溯
+- 13_app
+  - LRU(Least Recently Used) 最久未使用淘汰算法实现
+  - LFU(Least Frequently Used) 最不经常使用淘汰算法实现
+  - AVL 平衡二叉搜索树实现
+  - RedBlackTree 红黑树实现

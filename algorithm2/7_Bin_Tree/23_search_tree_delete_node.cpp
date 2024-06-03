@@ -53,6 +53,8 @@ public:
                 delete root;
                 return tp_node;
             } else {  // 5.
+                // 将 左孩子接到 右孩子的最左孙子
+                // 返回 右孩子
                 TreeNode *move_node = root->left;
                 TreeNode *rleft_node = root->right;
                 while (rleft_node->left != nullptr) {

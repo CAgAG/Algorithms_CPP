@@ -39,7 +39,7 @@ public:
             return new_node;
         }
 
-        // 找到分割点
+        // 找到分割点，在中序中找到对应的点的索引
         int in_target_index = 0;
         for (; in_target_index < inorder.size(); ++in_target_index) {
             if (inorder[in_target_index] == target_num) {
@@ -50,12 +50,12 @@ public:
         // 切割中序数组
         vector<int> left_in(inorder.begin(), inorder.begin() + in_target_index);
         vector<int> right_in(inorder.begin() + in_target_index + 1, inorder.end());
-        // 切割后序数组
+        // 切割后序数组，使用对应中序左子区间的长度
         vector<int> left_post(postorder.begin(), postorder.begin() + left_in.size());
-        vector<int> right_post(postorder.begin() + left_in.size(), postorder.end() - 1);
+        vector<int> right_post(postorder.begin() + left_in.size(), postorder.end() - 1);  // 排除最后一个
 
-        new_node->left = traversal(left_in, left_post);
-        new_node->right = traversal(right_in, right_post);
+        new_node->left = traversal(left_in, left_post);  // 对左区间搜索
+        new_node->right = traversal(right_in, right_post);  // 对右区间搜索
         return new_node;
     }
 

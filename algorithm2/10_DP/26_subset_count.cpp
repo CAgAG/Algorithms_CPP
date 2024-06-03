@@ -4,6 +4,7 @@
  * @note   : 不同的子序列 https://leetcode.cn/problems/distinct-subsequences/description/
  * @date   : 2024/4/26 17
  *************************/
+// 与上题的区别在于：这题要求的是整个子序列出现的次数，而上题要求的是子序列本身的字符数
 
 #include "iostream"
 #include "vector"

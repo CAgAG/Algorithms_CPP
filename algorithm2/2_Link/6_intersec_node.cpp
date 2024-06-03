@@ -51,6 +51,7 @@ public:
             curB = headA;
             diff_num = len_B - len_A;
         }
+        // 长的先 走完差值
         while (diff_num--) {
             curA = curA->next;
         }

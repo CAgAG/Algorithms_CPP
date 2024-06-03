@@ -25,18 +25,20 @@ using namespace std;
 class Solution {
 private:
     static bool cmp(int a, int b) {
-        return abs(a) > abs(b);
+        return abs(a) > abs(b);  // 按绝对值 从 大到小排序
     }
 
 public:
     int largestSumAfterKNegations(vector<int> &A, int K) {
         sort(A.begin(), A.end(), cmp);       // 第一步
+        // 找最小的负数 取反
         for (int i = 0; i < A.size(); i++) { // 第二步
             if (A[i] < 0 && K > 0) {
                 A[i] *= -1;
                 K--;
             }
         }
+        // 如果还有奇数步，就对一个最小的正数取反
         if (K % 2 == 1) { // 第三步, 奇数步
             A[A.size() - 1] *= -1;
         }

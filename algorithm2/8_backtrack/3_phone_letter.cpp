@@ -38,7 +38,7 @@ public:
 
             ans.push_back(cur_letter);
             int loop_skip = i / 4;
-            backtrack(k, (loop_skip + 1) * 4, (loop_skip + 1) * 4 + 4 - 1);
+            backtrack(k, (loop_skip + 1) * 4, (loop_skip + 1) * 4 + 4 - 1);  // 全 闭区间
             ans.pop_back();
         }
 

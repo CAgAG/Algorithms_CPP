@@ -36,6 +36,7 @@ public:
             if (slow_point == fast_point) {  // 有环
                 ListNode *index1 = fast_point;  // 快慢指针相遇点
                 ListNode *index2 = head;  // 头节点
+                // 再找相遇的节点
                 while (index1 != index2) {
                     index1 = index1->next;
                     index2 = index2->next;

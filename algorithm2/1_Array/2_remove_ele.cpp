@@ -13,11 +13,12 @@ using namespace std;
 class Solution {
 public:
     /* 时间复杂度：O(n) */
+    // 双指针
     int removeElement(vector<int>& nums, int val) {
         int slow_point = 0;  // 之前的数组是不含 val的, 也是数据更新的位置
         for (int fast_point = 0; fast_point < nums.size(); ++fast_point) {  // 寻找新数组的元素, 新数组就是不含有目标元素的数组
-            if (nums[fast_point] != val) {
-                nums[slow_point] = nums[fast_point];
+            if (nums[fast_point] != val) {  // 不是要移除的值
+                nums[slow_point] = nums[fast_point];  // fast 覆盖 slow
                 slow_point += 1;
             }
             // 如果遇到与 val相等的值就只更新 fast_point

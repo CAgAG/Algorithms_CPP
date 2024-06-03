@@ -25,6 +25,7 @@ public:
 
     int pop() {
         int que1_size = que1.size();
+        // 使用 que2 备份 que1，直到que1只剩一个元素
         for (int i = 0; i < que1_size - 1; ++i) {
             que2.push(que1.front());
             que1.pop();
@@ -32,6 +33,7 @@ public:
         int ret = que1.front();
         que1.pop();
 
+        // 将备份的 que2 再放回 que1
         while (que2.size() > 0) {
             que1.push(que2.front());
             que2.pop();
@@ -40,7 +42,9 @@ public:
     }
 
     int top() {
+        // (栈)弹出
         int ret = this->pop();
+        // 队列 压入
         this->push(ret);
         return ret;
     }

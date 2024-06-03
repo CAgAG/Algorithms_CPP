@@ -29,6 +29,7 @@ struct TreeNode {
 
 class Solution {
 public:
+    // 总是选中间的数作为节点
     TreeNode *traversal(vector<int> &nums, int left, int right) {
         if (left > right) {
             return nullptr;

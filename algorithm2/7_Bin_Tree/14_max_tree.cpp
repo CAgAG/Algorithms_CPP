@@ -4,6 +4,10 @@
  * @note   : 最大二叉树 https://leetcode.cn/problems/maximum-binary-tree/description/
  * @date   : 2024/3/14 18
  *************************/
+// 最大二叉树定义如下：
+// 二叉树的根是数组中的最大元素。
+// 左子树是通过数组中最大值左边部分构造出的最大二叉树。
+// 右子树是通过数组中最大值右边部分构造出的最大二叉树。
 
 #include "iostream"
 #include "vector"

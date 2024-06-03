@@ -39,22 +39,26 @@ public:
         que_left.push(root->left);
         que_right.push(root->right);
         while (!que_left.empty() && !que_right.empty()) {
+            // 对称的节点
             TreeNode *left_node = que_left.front();
             que_left.pop();
             TreeNode *right_node = que_right.front();
             que_right.pop();
 
+            // 两孩子都是 null
             if (left_node == nullptr && right_node == nullptr) {
                 continue;
             }
 
+            // 有一个是null
             if (left_node == nullptr || right_node == nullptr || left_node->val != right_node->val) {
                 return false;
             }
 
-            que_left.push(left_node->left);
+            que_left.push(left_node->left);  // left
             que_left.push(left_node->right);
-            que_right.push(right_node->right);
+
+            que_right.push(right_node->right);  // right
             que_right.push(right_node->left);
         }
         return true;

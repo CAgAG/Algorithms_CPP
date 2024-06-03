@@ -38,13 +38,14 @@ private:
      */
     int traversal(TreeNode *root) {
         if (root == nullptr) {
+            // 叶子节点以下的空节点
             return 2; // 表示已覆盖的状态
         }
 
         int left = traversal(root->left);
         int right = traversal(root->right);
 
-        // 左右节点都有覆盖
+        // 左右节点都有覆盖  ==> 叶子节点以下的空节点
         if (left == 2 && right == 2) {
             // 等父节点的父节点来放摄像头  ==> 隔两个空节点放一个摄像头
             return 0;

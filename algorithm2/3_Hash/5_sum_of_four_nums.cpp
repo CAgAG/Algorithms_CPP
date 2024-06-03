@@ -26,7 +26,7 @@ public:
         int sum_count = 0;
         for (int it3: nums3) {
             for (int it4: nums4) {
-                int target = 0 - (it3 + it4);  // 简单推导 n1 + n2 + n3 + n4 = 0
+                int target = 0 - (it3 + it4);  // 简单推导 n1 + n2 + n3 + n4 = 0  ==> n1 + n2 = 0 - (n3 + n4)
                 if (map.find(target) != map.end()) {
                     sum_count += map[target];
                 }

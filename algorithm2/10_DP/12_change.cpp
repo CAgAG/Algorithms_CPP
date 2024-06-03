@@ -4,6 +4,7 @@
  * @note   : 零钱兑换 https://leetcode.cn/problems/coin-change/description/
  * @date   : 2024/4/23 20
  *************************/
+// 9（零钱兑换II） 和 12（零钱兑换） 一起看
 
 #include "iostream"
 #include "vector"
@@ -22,7 +23,7 @@ public:
         for (int i = 0; i < coins.size(); ++i) {
             for (int j = coins[i]; j <= bag_weight; ++j) {
                 if (j - coins[i] >= 0 && dp[j - coins[i]] != INT_MAX) {
-                    dp[j] = min(dp[j], dp[j - coins[i]] + 1);
+                    dp[j] = min(dp[j], dp[j - coins[i]] + 1);  // 纯粹的完全背包问题
                 }
             }
         }

@@ -33,6 +33,8 @@ public:
             return nullptr;
         }
 
+        // ==> 拦截 不在范围内的节点
+        // 只返回 在区间内的节点
         if (root->val < low) {
             // 寻找符合区间[low, high]的节点
             TreeNode *right_tree = traversal(root->right, low, high);

@@ -36,7 +36,7 @@ public:
             return;
         }
 
-        traversal(root->right);
+        traversal(root->right);  // 翻转，先从右节点开始 ==> 相当于 倒序 遍历 递增的序列
 
         root->val += pre_node->val;
         pre_node = root;

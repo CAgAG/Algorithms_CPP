@@ -63,7 +63,7 @@ public:
         for (int i = start_index; i < s.size(); ++i) {
             if (check(s, start_index, i)) {
                 path.push_back(s.substr(start_index, i - start_index + 1));
-                backtrace(s, i + 1, add_point_count + 1);
+                backtrace(s, i + 1, add_point_count + 1);  // 点就是回溯的地方
                 path.pop_back();
             }
         }

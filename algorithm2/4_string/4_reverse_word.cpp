@@ -23,7 +23,7 @@ public:
         // 统计左多余的空格
         int space_left = 0;
         while (s[space_left] == ' ') space_left++;
-        // 移动字符
+        // 移动字符，有效字符向左移
         int new_i = 0;
         for (int i = space_left; i < new_size; ++i) {
             s[new_i] = s[i];
@@ -40,6 +40,7 @@ public:
         while (right_point > 0) {
             if (s[right_point] == ' ' && s[right_point - 1] == ' ') {
                 space_mid += 1;
+                // 左移一位，right_point 到 结尾
                 for (int i = right_point; i < new_size - 1; ++i) {
                     s[i] = s[i + 1];
                 }

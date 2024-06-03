@@ -24,19 +24,20 @@ public:
         // s = "aabaaf"  --> 0 1 0 1 2 0
         // j指向前缀末尾位置，i指向后缀末尾位置; j 同时还代表了上一个字符的最长相等的前后缀
         int j = 0;
-        next[0] = 0;
+        next[0] = 0;  // 右移一位
         for (int i = 1; i < s.size(); i++) {
             while (j > 0 && s[i] != s[j]) { // j要保证大于0，因为下面有取j-1作为数组下标的操作
-                j = next[j - 1]; // 注意这里，是要找前一位的对应的回退位置了
+                j = next[j - 1]; // 注意这里，是要找【前一位】的对应的回退位置了
             }
             if (s[i] == s[j]) {  // 找到相同的前后缀
-                j++;
+                j++;  // 【前一位】
             }
-            next[i] = j;
+            next[i] = j;  // 与后缀相同字符的坐标是 j
         }
     }
 
     int strStr(string haystack, string needle) {
+        // haystack.size > needle.size
         if (needle.size() == 0) {
             return 0;
         }

@@ -16,6 +16,8 @@ class Solution {
 public:
     int evalRPN(vector<string> &tokens) {
         stack<long long> stack_sym;
+        // 栈每次遇到 运算符 就 弹出两个数
+        // 运算结果 还要 再压入栈
         long long num1, num2;
 
         for (string sym: tokens) {

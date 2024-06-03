@@ -14,6 +14,7 @@ using namespace std;
 
 class Solution {
 private:
+    // 按左区间排序
     static bool cmp(const vector<int> &a, vector<int> &b) {
         return a[0] > b[0];
     }
@@ -22,7 +23,7 @@ public:
         sort(points.begin(), points.end(), cmp);
 
         int ret = 0;
-        int left = points[0][0], right = points[0][1];
+        int left = points[0][0], right = points[0][1];  // 最多重叠的公共区间
         for (int i = 1; i < points.size(); ++i) {
             int left_p = points[i][0];
             int right_p = points[i][1];
@@ -38,6 +39,7 @@ public:
             // 跳出区间
             if (left > right) {
                 ret++;
+                // 重新计算 最多重叠的公共区间
                 left = left_p;
                 right = right_p;
             }

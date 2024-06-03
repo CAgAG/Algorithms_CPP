@@ -62,7 +62,7 @@ public:
             ret.push_back(chessboard);
             return;
         }
-        for (int col = 0; col < n; col++) {
+        for (int col = 0; col < n; col++) {  // 对每一个 row 的 col进行回溯
             if (isValid(row, col, chessboard, n)) { // 验证合法就可以放
                 chessboard[row][col] = 'Q'; // 放置皇后
                 backtrace(n, row + 1, chessboard);
