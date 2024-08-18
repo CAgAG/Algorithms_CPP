@@ -16,7 +16,7 @@ vector<int> tp_list;
 void merge(vector<int> &list, int left_index, int mid_index, int right_index) {
     // 更新 对应部分的tp_list
     for (int i = left_index; i <= right_index; ++i) {
-        tp_list[i] = list[i];
+        tp_list[i] = list[i];  // 复制 left_index 到 right_index的数组
     }
 
     // [left_index, mid_index], [mid_index + 1, right_index]

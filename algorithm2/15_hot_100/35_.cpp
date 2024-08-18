@@ -1,7 +1,7 @@
 /*************************
  * @file   : 34_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 搜索二维矩阵 https://leetcode.cn/problems/search-a-2d-matrix/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/25 10
  *************************/
 
@@ -35,6 +35,7 @@ public:
     bool searchMatrix(vector<vector<int>> &matrix, int target) {
         int m = matrix.size();
 
+        // 按行二分查找
         for (int i = 0; i < m; ++i) {
             if (bin_search(matrix[i], target)) {
                 return true;

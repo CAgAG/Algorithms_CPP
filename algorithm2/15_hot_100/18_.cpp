@@ -1,7 +1,7 @@
 /*************************
  * @file   : 18_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : K 个一组翻转链表 https://leetcode.cn/problems/reverse-nodes-in-k-group/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/22 16
  *************************/
 
@@ -25,6 +25,9 @@ struct ListNode {
 class Solution {
 public:
     void revise_range_link(ListNode *head, ListNode *tail) {
+        /* A -> 【B -> C -> D】 -> E
+         * A -> 【B <- C <- D】 -> E
+         */
         ListNode *pre_node = head;
         ListNode *cur_node = head->next;
         while (cur_node != tail) {

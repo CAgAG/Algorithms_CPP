@@ -1,7 +1,7 @@
 /*************************
  * @file   : 33_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 单词搜索 https://leetcode.cn/problems/word-search/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/25 10
  *************************/
 

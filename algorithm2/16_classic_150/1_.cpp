@@ -29,7 +29,7 @@ public:
             int cur_num = i;
             // 只需要判断每个累乘的数有多少个 5 的因子即可
             while (cur_num > 0) {  // 不能是 0
-                if (cur_num % 5 == 0) {
+                if (cur_num % 5 == 0) {  // 可以被 5整除
                     ret++;
                     cur_num /= 5;
                 } else {

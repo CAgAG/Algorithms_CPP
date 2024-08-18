@@ -1,7 +1,7 @@
 /*************************
  * @file   : 29_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 腐烂的橘子 https://leetcode.cn/problems/rotting-oranges/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/24 10
  *************************/
 
@@ -34,9 +34,9 @@ public:
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {
                 int cur_p = grid[i][j];
-                if (cur_p == 2) {
+                if (cur_p == 2) {  // 烂橘子
                     que.push({i, j});
-                } else if (cur_p == 1) {
+                } else if (cur_p == 1) {  // 新鲜橘子
                     count_1++;
                 }
             }
@@ -59,6 +59,7 @@ public:
                     if (visited[may_x][may_y]) {
                         continue;
                     }
+                    // 新鲜橘子 腐烂
                     if (grid[may_x][may_y] == 1) {
                         count_1--;
                         grid[may_x][may_y] = 2;

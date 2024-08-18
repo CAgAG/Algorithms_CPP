@@ -1,7 +1,7 @@
 /*************************
  * @file   : 11_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 旋转图像 https://leetcode.cn/problems/rotate-image/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/21 18
  *************************/
 
@@ -31,7 +31,7 @@ public:
             }
         }
 
-        // 主对角线翻转
+        // 按主对角线翻转
         for (int i = 0; i < n; ++i) {
 
             int right_x = i - 1;

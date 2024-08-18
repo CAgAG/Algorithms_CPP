@@ -1,7 +1,7 @@
 /*************************
  * @file   : 4_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 盛最多水的容器 https://leetcode.cn/problems/container-with-most-water/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/21 14
  *************************/
 

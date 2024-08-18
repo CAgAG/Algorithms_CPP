@@ -1,7 +1,7 @@
 /*************************
  * @file   : 14_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 两数相加 https://leetcode.cn/problems/add-two-numbers/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/22 10
  *************************/
 

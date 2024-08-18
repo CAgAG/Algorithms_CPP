@@ -1,7 +1,7 @@
 /*************************
  * @file   : 47_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 多数元素 https://leetcode.cn/problems/majority-element/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/27 17
  *************************/
 
@@ -28,6 +28,7 @@ public:
         int ret_count = 0;
 
         for (int i = 0; i < nums.size(); ++i) {
+            // 多数元素的加减，最后就是结果
             if (nums[i] == ret) {
                 ret_count++;
             } else {

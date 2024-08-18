@@ -1,7 +1,7 @@
 /*************************
  * @file   : 9_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 矩阵置零 https://leetcode.cn/problems/set-matrix-zeroes/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/21 17
  *************************/
 
@@ -16,7 +16,7 @@ public:
     void setZeroes(vector<vector<int>> &matrix) {
         int m = matrix.size();
         int n = matrix[0].size();
-        vector<vector<bool>> visited = vector<vector<bool>>(m, vector<bool>(n, false));
+        vector<vector<bool>> visited = vector<vector<bool>>(m, vector<bool>(n, false));  // 标记已访问和生成的0元素，防止重复
 
         for (int i = 0; i < m; ++i) {
             for (int j = 0; j < n; ++j) {

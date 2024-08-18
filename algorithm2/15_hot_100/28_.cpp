@@ -1,7 +1,7 @@
 /*************************
  * @file   : 28_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 二叉树中的最大路径和 https://leetcode.cn/problems/binary-tree-maximum-path-sum/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/23 19
  *************************/
 

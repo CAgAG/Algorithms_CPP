@@ -1,7 +1,7 @@
 /*************************
  * @file   : 13_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 相交链表 https://leetcode.cn/problems/intersection-of-two-linked-lists/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/22 10
  *************************/
 

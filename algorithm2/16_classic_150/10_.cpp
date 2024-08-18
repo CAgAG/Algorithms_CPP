@@ -1,7 +1,7 @@
 /*************************
  * @file   : 10_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : H 指数 https://leetcode.cn/problems/h-index/?envType=study-plan-v2&envId=top-interview-150
  * @date   : 2024/7/8 16
  *************************/
 

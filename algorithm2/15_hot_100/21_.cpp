@@ -1,7 +1,7 @@
 /*************************
  * @file   : 21_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 合并 K 个升序链表 https://leetcode.cn/problems/merge-k-sorted-lists/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/22 19
  *************************/
 
@@ -41,7 +41,7 @@ public:
                 }
 
                 if (lists_cur_node[cur_l]->val < diff.first) {
-                    diff = {lists_cur_node[cur_l]->val, cur_l};
+                    diff = {lists_cur_node[cur_l]->val, cur_l};  // 更新最小值
                 }
                 all_end = false;
             }

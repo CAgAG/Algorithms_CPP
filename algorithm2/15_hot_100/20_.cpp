@@ -1,7 +1,7 @@
 /*************************
  * @file   : 20_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 排序链表 https://leetcode.cn/problems/sort-list/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/22 17
  *************************/
 
@@ -75,35 +75,44 @@ public:
         }
 
         ListNode *dummyHead = new ListNode(0, head);
+        // subLength: 归并排序的区间长度，1，2，4，8 ...
         for (int subLength = 1; subLength < length; subLength *= 2) {
+            // 每次都要从这里开始
             ListNode *prev = dummyHead, *curr = dummyHead->next;
 
             // 遍历链表
+            // 对链表进行归并排序
             while (curr != nullptr) {
+                // head1, ... subLength (curr)
                 ListNode *head1 = curr;
                 for (int i = 1; i < subLength && curr->next != nullptr; i++) {
                     curr = curr->next;
                 }
+                // head1, ... subLength (curr), head2
                 ListNode *head2 = curr->next;
-                curr->next = nullptr; // 此时的 curr是head1的尾节点
+                curr->next = nullptr; // 截断，此时的 curr是head1的尾节点
 
+                // head1, ... subLength, null, head2， ... subLength (curr)
                 curr = head2;
                 for (int i = 1; i < subLength && curr != nullptr && curr->next != nullptr; i++) {
                     curr = curr->next;
                 }
+                // head1, ... subLength, null, head2， ... subLength, null, next
                 // 保存下一次合并的头节点
                 ListNode *next = nullptr;
-                if (curr != nullptr) {
-                    next = curr->next;
-                    curr->next = nullptr;
+                if (curr != nullptr) {  // 注意：这个是判断条件
+                    next = curr->next;  // 保存
+                    curr->next = nullptr;  // 截断
                 }
 
+                // 【prev】, head1, ... subLength, null, head2， ... subLength, null, next
                 ListNode *merged = merge(head1, head2);
                 prev->next = merged;  // 上一个合并的尾节点
-                while (prev->next != nullptr) {
+                // 更新
+                while (prev->next != nullptr) {  // prev移动到合并节点的末尾
                     prev = prev->next;
                 }
-                curr = next;
+                curr = next;  // 接上之前的末尾
             }
 
         }

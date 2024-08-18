@@ -1,7 +1,7 @@
 /*************************
  * @file   : 34_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 寻找旋转排序数组中的最小值 https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/25 10
  *************************/
 

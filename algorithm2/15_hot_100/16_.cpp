@@ -1,7 +1,7 @@
 /*************************
  * @file   : 14_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 合并两个有序链表 https://leetcode.cn/problems/merge-two-sorted-lists/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/22 10
  *************************/
 

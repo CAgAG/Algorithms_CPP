@@ -1,7 +1,7 @@
 /*************************
  * @file   : 5_.cpp
  * @encode : UTF-8
- * @note   : Pow(x, n) https://leetcode.cn/problems/powx-n/description/
+ * @note   : x^n = Pow(x, n) https://leetcode.cn/problems/powx-n/description/
  * @date   : 2024/6/29 11
  *************************/
 

@@ -1,7 +1,7 @@
 /*************************
  * @file   : 7_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 除自身以外数组的乘积 https://leetcode.cn/problems/product-of-array-except-self/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/21 16
  *************************/
 
@@ -17,8 +17,8 @@ class Solution {
 public:
     vector<int> productExceptSelf(vector<int> &nums) {
         int n = nums.size();
-        vector<int> left = vector<int>(n, 0);
-        vector<int> right = vector<int>(n, 0);
+        vector<int> left = vector<int>(n, 0);  // 除 i 以外左边的乘积
+        vector<int> right = vector<int>(n, 0);  // 除 i 以外右边的乘积
 
         left[0] = 1;
         for (int i = 1; i < n; ++i) {

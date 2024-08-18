@@ -1,7 +1,7 @@
 /*************************
  * @file   : 6_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 轮转数组 https://leetcode.cn/problems/rotate-array/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/21 16
  *************************/
 

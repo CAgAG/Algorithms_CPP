@@ -1,7 +1,7 @@
 /*************************
  * @file   : 19_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 随机链表的复制 https://leetcode.cn/problems/copy-list-with-random-pointer/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/22 17
  *************************/
 

@@ -1,7 +1,7 @@
 /*************************
  * @file   : 9_.cpp
  * @encode : UTF-8
- * @note   : https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/description/?envType=study-plan-v2&envId=top-interview-150
+ * @note   : 删除有序数组中的重复项 II https://leetcode.cn/problems/remove-duplicates-from-sorted-array-ii/description/?envType=study-plan-v2&envId=top-interview-150
  * @date   : 2024/7/7 10
  *************************/
 

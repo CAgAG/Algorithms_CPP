@@ -1,7 +1,7 @@
 /*************************
  * @file   : 46_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 最长回文子串 https://leetcode.cn/problems/longest-palindromic-substring/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/27 13
  *************************/
 

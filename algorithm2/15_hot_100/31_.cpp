@@ -1,7 +1,7 @@
 /*************************
  * @file   : 30_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 实现 Trie (前缀树) https://leetcode.cn/problems/implement-trie-prefix-tree/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/24 12
  *************************/
 

@@ -1,7 +1,7 @@
 /*************************
  * @file   : 3_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 移动零 https://leetcode.cn/problems/move-zeroes/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/21 14
  *************************/
 
@@ -31,8 +31,6 @@ public:
 
             }
         }
-
-
     }
 };
 

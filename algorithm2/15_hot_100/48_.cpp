@@ -1,7 +1,7 @@
 /*************************
  * @file   : 48_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 颜色分类 https://leetcode.cn/problems/sort-colors/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/27 18
  *************************/
 
@@ -14,8 +14,8 @@ using namespace std;
 class Solution {
 public:
     void sortColors(vector<int> &nums) {
-        int left_i = 0;
-        int right_i = nums.size() - 1;
+        int left_i = 0;  // 0号颜色交换的位置
+        int right_i = nums.size() - 1;  // 2号颜色交换的位置
 
         for (int i = 0; i <= right_i; ++i) {
             if (nums[i] == 0) {

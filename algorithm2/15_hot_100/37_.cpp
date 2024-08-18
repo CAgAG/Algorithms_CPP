@@ -1,7 +1,7 @@
 /*************************
  * @file   : 34_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 搜索旋转排序数组 https://leetcode.cn/problems/search-in-rotated-sorted-array/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/25 10
  *************************/
 
@@ -29,7 +29,7 @@ public:
             // 实际的左右边界和移动的左右边界是分开的
             // 实际的左右边界不变, 只移动了 mid
             if (nums[0] <= cur_mid) {  // 说明左区间是有序的 [0, .., mid, ..., end]
-                if (nums[0] <= target && target < cur_mid) {
+                if (nums[0] <= target && target < cur_mid) {  // [0, .., target, .., mid, ...,  end]
                     right_i = mid_i - 1;
                 } else {
                     left_i = mid_i + 1;

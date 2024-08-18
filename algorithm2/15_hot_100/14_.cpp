@@ -1,7 +1,7 @@
 /*************************
  * @file   : 14_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 回文链表 https://leetcode.cn/problems/palindrome-linked-list/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/22 10
  *************************/
 
@@ -52,6 +52,7 @@ public:
             s_node = s_node->next;
         }
 
+        // 反转链表的一半
         ListNode *newHead = revise_link(s_node);
         ListNode *cur_node = head;
         while (newHead != nullptr) {

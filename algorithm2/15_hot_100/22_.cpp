@@ -1,7 +1,7 @@
 /*************************
  * @file   : 22_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 二叉树的直径 https://leetcode.cn/problems/diameter-of-binary-tree/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/23 11
  *************************/
 
@@ -31,6 +31,7 @@ public:
             return 0;
         }
 
+        // 遍历整棵树，求节点的高度
         int left_h = traver(root->left);
         int right_h = traver(root->right);
 

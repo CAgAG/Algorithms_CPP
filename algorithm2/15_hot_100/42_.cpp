@@ -1,7 +1,7 @@
 /*************************
  * @file   : 42_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 杨辉三角 https://leetcode.cn/problems/pascals-triangle/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/26 11
  *************************/
 

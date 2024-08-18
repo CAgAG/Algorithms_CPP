@@ -1,7 +1,7 @@
 /*************************
  * @file   : 14_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 环形链表 https://leetcode.cn/problems/linked-list-cycle/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/22 10
  *************************/
 

@@ -1,7 +1,7 @@
 /*************************
  * @file   : 8_.cpp
  * @encode : UTF-8
- * @note   : https://leetcode.cn/problems/remove-duplicates-from-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150
+ * @note   : 删除有序数组中的重复项 https://leetcode.cn/problems/remove-duplicates-from-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150
  * @date   : 2024/7/7 10
  *************************/
 
@@ -14,13 +14,11 @@ using namespace std;
 class Solution {
 public:
     int removeDuplicates(vector<int> &nums) {
-        int cur_i = 1, cur_j = 0;
-
+        int cur_i = 1;
+        // cur_i, ..., i-1, i
         for (int i = 1; i < nums.size(); ++i) {
-            if (nums[i] != nums[i - 1]) {
-                cur_j = i;
-
-                nums[cur_i] = nums[cur_j];
+            if (nums[i] != nums[i - 1]) {  // 不重复的元素
+                nums[cur_i] = nums[i];
                 cur_i++;
             }
         }

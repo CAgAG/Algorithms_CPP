@@ -1,7 +1,7 @@
 /*************************
  * @file   : 15_.cpp
  * @encode : UTF-8
- * @note   : Z 字形变换 https://leetcode.cn/problems/zigzag-conversion/description/?envType=study-plan-v2&envId=top-interview-150
+ * @note   : Z 字形变换(倒N) https://leetcode.cn/problems/zigzag-conversion/description/?envType=study-plan-v2&envId=top-interview-150
  * @date   : 2024/7/11 19
  *************************/
 

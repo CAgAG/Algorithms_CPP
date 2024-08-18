@@ -1,7 +1,7 @@
 /*************************
  * @file   : 41 _.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 数据流的中位数 https://leetcode.cn/problems/find-median-from-data-stream/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/26 10
  *************************/
 
@@ -29,11 +29,11 @@ public:
     // 奇数 -> 偶数: 一样多
     void addNum(int num) {
         // 偶数个元素
-        if (que_right_min.size() == que_left_max.size()) {
+        if (que_right_min.size() == que_left_max.size()) {  // que_left_max ++
             // 向右边插入
             que_right_min.push(num);
             // 右边, 再弹出来给左边, 保持平衡
-            que_left_max.push(que_right_min.top());
+            que_left_max.push(que_right_min.top());  // 过一遍
             que_right_min.pop();
         } else {  // 有一个是奇数个元素, 且一定是 que_left_max; que_right_min 是平衡的
             que_left_max.push(num);
@@ -43,6 +43,7 @@ public:
         }
     }
 
+    // 如果列表的大小是偶数，则没有中间值，中位数是两个中间值的平均值
     double findMedian() {
         if (que_left_max.size() == que_right_min.size()) {
             return (que_left_max.top() + que_right_min.top()) / 2.0;

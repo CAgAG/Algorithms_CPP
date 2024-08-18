@@ -1,7 +1,7 @@
 /*************************
  * @file   : 1_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 字母异位词分组 https://leetcode.cn/problems/group-anagrams/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/21 09
  *************************/
 
@@ -21,6 +21,7 @@ public:
         map<string, vector<int>> mp;
         for (int i = 0; i < strs.size(); ++i) {
             string cur_s = strs[i];
+            // 排序，统一 key
             sort(cur_s.begin(), cur_s.end());
             if (mp.find(cur_s) != mp.end()) {
                 mp[cur_s].push_back(i);

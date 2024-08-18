@@ -1,8 +1,7 @@
-
 /*************************
  * @file   : 22_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 从前序与中序遍历序列构造二叉树 https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/23 11
  *************************/
 
@@ -47,6 +46,7 @@ public:
         vector<int> left_in(inorder.begin(), inorder.begin() + find_in_index);
         vector<int> right_in(inorder.begin() + find_in_index + 1, inorder.end());
 
+        // left_in和 left_pre 长度相同
         vector<int> left_pre(preorder.begin() + 1, preorder.begin() + 1 + find_in_index); // 注意是【不包括当前节点】的分成【不重合】的【两个子数组】
         vector<int> right_pre(preorder.begin() + 1 + find_in_index, preorder.end());
 

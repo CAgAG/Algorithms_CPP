@@ -1,7 +1,7 @@
 /*************************
  * @file   : 30_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 课程表 https://leetcode.cn/problems/course-schedule/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/24 12
  *************************/
 
@@ -19,7 +19,7 @@ public:
         queue<int> que;
 
         for (auto d = indegree_mp.begin(); d != indegree_mp.end(); ++d) {
-            if (d->second == 0) {
+            if (d->second == 0) {  // 入度为 0
                 que.push(d->first);
             }
         }
@@ -29,10 +29,11 @@ public:
             que.pop();
 
             if (mp.find(node) != mp.end()) {
+                // node 指向的节点, node -> ?
                 for (int i = 0; i < mp[node].size(); ++i) {
                     indegree_mp[mp[node][i]]--;
 
-                    if (indegree_mp[mp[node][i]] == 0) {
+                    if (indegree_mp[mp[node][i]] == 0) {  // 入度为 0
                         que.push(mp[node][i]);
                     }
                 }
@@ -55,6 +56,7 @@ public:
         }
 
         for (int i = 0; i < n; ++i) {
+            // f <- s
             int f = prerequisites[i][0];
             int s = prerequisites[i][1];
             if (f == s) {
@@ -63,6 +65,7 @@ public:
             indegree_mp[f]++;
             mp[s].push_back(f);
         }
+
         topo_sort(mp, indegree_mp);
         for (auto d = indegree_mp.begin(); d != indegree_mp.end(); ++d) {
             if (d->second > 0) {

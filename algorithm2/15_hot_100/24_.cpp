@@ -2,7 +2,7 @@
 /*************************
  * @file   : 22_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 二叉树的右视图 https://leetcode.cn/problems/binary-tree-right-side-view/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/23 11
  *************************/
 

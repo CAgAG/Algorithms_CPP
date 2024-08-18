@@ -38,7 +38,7 @@ public:
 
         int pre_i = 1;
         for (int i = 1; i <= x; ++i) {
-
+            // i * i = x
             if (x / i == i) {
                 return i;
             }

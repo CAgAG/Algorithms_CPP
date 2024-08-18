@@ -1,7 +1,7 @@
 /*************************
  * @file   : 34_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 搜索插入位置 https://leetcode.cn/problems/search-insert-position/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/25 10
  *************************/
 

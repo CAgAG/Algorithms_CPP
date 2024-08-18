@@ -1,7 +1,7 @@
 /*************************
  * @file   : 11_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 搜索二维矩阵 II https://leetcode.cn/problems/search-a-2d-matrix-ii/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/21 18
  *************************/
 
@@ -16,10 +16,12 @@ public:
     int m, n;
 
     bool traver(vector<vector<int>> &matrix, int target) {
+        // 按行遍历
         for (int i = 0; i < m; ++i) {
 
             int left_i = 0;
             int right_i = n - 1;
+            // 对每一行使用二分查找
             while (left_i <= right_i) {
                 int mid_i = (left_i + right_i) / 2;
                 if (matrix[i][mid_i] == target) {

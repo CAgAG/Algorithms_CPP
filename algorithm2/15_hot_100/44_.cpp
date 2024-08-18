@@ -1,7 +1,7 @@
 /*************************
  * @file   : 44_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : TODO: 最长有效括号 https://leetcode.cn/problems/longest-valid-parentheses/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/26 22
  *************************/
 

@@ -1,7 +1,7 @@
 /*************************
  * @file   : 22_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 二叉搜索树中第K小的元素 https://leetcode.cn/problems/kth-smallest-element-in-a-bst/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/23 11
  *************************/
 

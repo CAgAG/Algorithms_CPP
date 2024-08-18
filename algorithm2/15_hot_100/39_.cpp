@@ -1,7 +1,7 @@
 /*************************
  * @file   : 39_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 最小栈 https://leetcode.cn/problems/min-stack/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/25 17
  *************************/
 
@@ -14,11 +14,14 @@
 using namespace std;
 
 
+// 能在常数时间内检索到最小元素的栈
 class MinStack {
 public:
     stack<int> norm_stack;
 
+    // 实现的关键
     stack<int> copy_stack;
+    // 栈顶 -> 栈低 ==> 小 -> 大
     stack<int> min_stack;
 
     MinStack() {
@@ -36,6 +39,7 @@ public:
 
         clear_copy();
         if (!min_stack.empty()) {
+            // 找 插入值 到最小栈的位置
             while (!min_stack.empty() && min_stack.top() < val) {
                 copy_stack.push(min_stack.top());
                 min_stack.pop();

@@ -1,7 +1,7 @@
 /*************************
  * @file   : 45_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 最小路径和 https://leetcode.cn/problems/minimum-path-sum/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/27 13
  *************************/
 
@@ -43,12 +43,12 @@ public:
                     continue;
                 }
                 if (i - 1 < 0) {
-                    top_num = INT_MAX;
+                    top_num = INT_MAX;  // 超出边界就是无限大
                 } else {
                     top_num = dp[i - 1][j];
                 }
                 if (j - 1 < 0) {
-                    left_num = INT_MAX;
+                    left_num = INT_MAX;  // 超出边界就是无限大
                 } else {
                     left_num = dp[i][j - 1];
                 }

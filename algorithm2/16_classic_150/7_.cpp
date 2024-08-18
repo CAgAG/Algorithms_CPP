@@ -1,7 +1,7 @@
 /*************************
  * @file   : 7_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 合并两个有序数组 https://leetcode.cn/problems/merge-sorted-array/?envType=study-plan-v2&envId=top-interview-150
  * @date   : 2024/7/6 16
  *************************/
 

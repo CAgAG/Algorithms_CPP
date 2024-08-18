@@ -1,7 +1,7 @@
 /*************************
  * @file   : 34_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 在排序数组中查找元素的第一个和最后一个位置 https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/25 10
  *************************/
 

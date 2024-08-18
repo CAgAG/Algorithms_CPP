@@ -2,7 +2,7 @@
 /*************************
  * @file   : 22_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 二叉树展开为链表 https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/23 11
  *************************/
 

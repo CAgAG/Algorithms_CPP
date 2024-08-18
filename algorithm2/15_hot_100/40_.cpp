@@ -1,7 +1,7 @@
 /*************************
  * @file   : 40_.cpp
  * @encode : UTF-8
- * @note   : kth 快排
+ * @note   : kth 快排 https://leetcode.cn/problems/kth-largest-element-in-an-array/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/25 20
  *************************/
 

@@ -1,7 +1,7 @@
 /*************************
  * @file   : 5_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 最小覆盖子串 https://leetcode.cn/problems/minimum-window-substring/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/21 15
  *************************/
 
@@ -53,7 +53,7 @@ public:
 
             target_map[s[right_i]]++;
 
-            while (check()) {
+            while (check()) {  // 如果符合条件
                 int cur_length = right_i - left_i;
                 if (cur_length < ret_len) {
                     ret_len = cur_length;
@@ -61,9 +61,9 @@ public:
                 }
                 // =============
                 if (target_map.find(s[left_i]) != target_map.end()) {
-                    target_map[s[left_i]]--;
+                    target_map[s[left_i]]--;  // 恢复计数
                 }
-                left_i++;
+                left_i++;  // 尝试缩小范围
             }
             right_i++;
 

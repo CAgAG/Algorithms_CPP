@@ -1,7 +1,7 @@
 /*************************
  * @file   : 32_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 括号生成 https://leetcode.cn/problems/generate-parentheses/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/25 09
  *************************/
 
@@ -18,6 +18,7 @@ public:
     string path;
     vector<bool> used;
 
+    // 生成的括号是否有效
     bool check(string s) {
         stack<char> st;
         for (int i = 0; i < s.size(); ++i) {
@@ -46,7 +47,9 @@ public:
             if (used[i]) {
                 continue;
             }
-            if (i > 0 && nums[i] == nums[i - 1] && used[i - 1] == false) {
+            if (i > 0
+                && nums[i] == nums[i - 1]
+                && used[i - 1] == false) {
                 continue;
             }
 

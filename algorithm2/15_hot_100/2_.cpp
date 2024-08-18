@@ -1,7 +1,7 @@
 /*************************
  * @file   : 2_.cpp
  * @encode : UTF-8
- * @note   : None
+ * @note   : 最长连续序列 https://leetcode.cn/problems/longest-consecutive-sequence/description/?envType=study-plan-v2&envId=top-100-liked
  * @date   : 2024/6/21 10
  *************************/
 
