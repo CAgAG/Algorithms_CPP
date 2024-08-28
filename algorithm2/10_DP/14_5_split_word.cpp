@@ -1,7 +1,7 @@
 /*************************
  * @file   : 14_split_word.cpp
  * @encode : UTF-8
- * @note   : 单词拆分
+ * @note   : 单词拆分 https://leetcode.cn/problems/word-break/description/
  * @date   : 2024/4/23 21
  *************************/
 

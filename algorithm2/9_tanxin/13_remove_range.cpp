@@ -31,7 +31,8 @@ public:
             if (intervals[i][0] >= end) { // 无重叠的情况
                 end = intervals[i][1];
             } else { // 重叠情况
-                end = min(end, intervals[i][1]);
+                // end = min(end, intervals[i][1]);
+                end = intervals[i][1];
                 count++;
             }
         }

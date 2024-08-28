@@ -62,7 +62,7 @@ public:
             }
         }
 
-        // 将 标记转为 面积
+        // 将陆地 标记转为 对应的面积
         for (int i = 0; i < mark_p.size(); ++i) {
             int m_x = mark_p[i].first;
             int m_y = mark_p[i].second;

@@ -20,7 +20,7 @@ public:
             int index_1 = i;
             int cur_i1 = numbers[index_1];
 
-            // 0, ..., i, left_i, ..., right_i(n)
+            // 0, ..., i(cur_i1), left_i, ..., right_i(n)
             int left_i = i + 1;
             int right_i = n - 1;
             int find_num = target - cur_i1;

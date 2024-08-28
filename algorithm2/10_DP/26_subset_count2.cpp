@@ -43,7 +43,6 @@ int main() {
     string s = "sea";
     string t = "eat";
 
-
     Solution so;
     cout << so.minDistance(s, t) << endl;
     return 0;

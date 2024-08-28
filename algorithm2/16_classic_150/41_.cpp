@@ -55,7 +55,7 @@ public:
         insert(root, word);
     }
 
-    bool dfs(const string &word, int index, Node *node) {
+    bool dfs(const string &word, int index, Node *node) {  // index: 当前遍历字符串的长度
         if (index == word.size()) {
             return node->is_end;
         }

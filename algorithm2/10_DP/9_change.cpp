@@ -37,7 +37,7 @@ public:
         /* 先物品再背包是 组合数
          * 先背包再物品是 【排列数】
          */
-        for (int j = 0; j <= bag_weight; ++j) {  // 遍历背包
+        for (int j = 0; j <= bag_weight; ++j) {  // 【遍历背包】, 注意这里是 【从 0开始】
             for (int i = 0; i < coins.size(); ++i) {  // 【重新】遍历物品
                 if (j - coins[i] >= 0) {
                     dp[j] = dp[j] + dp[j - coins[i]];

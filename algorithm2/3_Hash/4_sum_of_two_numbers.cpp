@@ -1,7 +1,7 @@
 /*************************
  * @file   : 4_sum_of_two_numbers.cpp
  * @encode : UTF-8
- * @note   : 两数之和 https://leetcode.cn/problems/two-sum/description/
+ * @note   : 两数之和
  * @date   : 2024/3/2 11
  *************************/
 /* 只会存在一个有效答案 */

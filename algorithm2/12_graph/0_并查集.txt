@@ -22,7 +22,7 @@ int find(int u) {
    else return father[u] = find(father[u]); // 路径压缩, 如果根不是自己，就根据数组下标一层一层向下找
 }
 
-// 判断 u 和 v是否找到同一个根 (可联通)
+// 判断 u 和 v是否找到同一个根 【(可联通)】
 bool isSame(int u, int v) {
     u = find(u);
     v = find(v);

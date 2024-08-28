@@ -14,9 +14,10 @@
 
 using namespace std;
 
-/* 单调队列
+/* 单调队列(不是严格的队列)
  * 其实队列没有必要维护窗口里的所有元素，只需要维护有可能成为窗口里最大值的元素就可以了 */
 class MyQueue { //单调队列（从大到小）  ==> 队列本身(弹出和压入)就是数组的顺序
+// <-- front(大)【...】 back(小) <--
 public:
     deque<int> que; // 使用deque来实现单调队列
 
@@ -34,7 +35,7 @@ public:
         while (!que.empty() && value > que.back()) {
             que.pop_back();
         }
-        que.push_back(value);
+        que.push_back(value);  // 保证队列中始终有一个元素
     }
 
     int front() {  // 返回最大值

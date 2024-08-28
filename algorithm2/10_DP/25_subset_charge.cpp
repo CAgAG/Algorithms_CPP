@@ -29,6 +29,7 @@ public:
                 }
             }
         }
+        // 相同子序列的长度 是否与 s相同
         return dp[m][n] == s.size();
     }
 };

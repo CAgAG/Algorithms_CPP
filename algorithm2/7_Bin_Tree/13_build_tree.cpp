@@ -50,7 +50,7 @@ public:
         // 切割中序数组
         vector<int> left_in(inorder.begin(), inorder.begin() + in_target_index);
         vector<int> right_in(inorder.begin() + in_target_index + 1, inorder.end());
-        // 切割后序数组，使用对应中序左子区间的长度
+        // 切割后序数组，使用对应【中序左子区间的长度】
         vector<int> left_post(postorder.begin(), postorder.begin() + left_in.size());
         vector<int> right_post(postorder.begin() + left_in.size(), postorder.end() - 1);  // 排除最后一个
 

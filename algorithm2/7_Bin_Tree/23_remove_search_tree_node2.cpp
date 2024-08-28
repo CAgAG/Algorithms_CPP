@@ -52,7 +52,7 @@ public:
                 // 删除后继节点
                 root->right = traver(root->right, rl_node->val);
 
-                // 代替删除节点
+                // 后继节点 代替删除节点
                 rl_node->left = root->left;
                 rl_node->right = root->right;
                 return rl_node;

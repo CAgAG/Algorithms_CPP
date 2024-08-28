@@ -31,6 +31,27 @@ public:
         }
         return ret;
     }
+
+    // =====================================================================
+    // dp[i][j] ：以下标 i为结尾的A，和以下标 j为结尾的B，最长重复子数组长度为dp[i][j]。
+    int findLength2(vector<int> &nums1, vector<int> &nums2) {
+        vector<vector<int>> dp(nums1.size() + 1, vector<int>(nums2.size() + 1, 0));
+        int ret = 0;
+
+        // 要对第一行，第一列经行初始化
+        for (int i = 0; i < nums1.size(); i++) if (nums1[i] == nums2[0]) dp[i][0] = 1;
+        for (int j = 0; j < nums2.size(); j++) if (nums1[0] == nums2[j]) dp[0][j] = 1;
+
+        for (int i = 0; i < nums1.size(); i++) {
+            for (int j = 0; j < nums2.size(); j++) {
+                if (nums1[i] == nums2[j] && i > 0 && j > 0) { // 防止 i-1 出现负数
+                    dp[i][j] = dp[i - 1][j - 1] + 1;
+                    ret = max(ret, dp[i][j]);
+                }
+            }
+        }
+        return ret;
+    }
 };
 
 int main() {

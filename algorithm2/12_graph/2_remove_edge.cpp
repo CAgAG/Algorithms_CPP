@@ -1,7 +1,7 @@
 /*************************
  * @file   : 2_remove_edge.cpp 并查集
  * @encode : UTF-8
- * @note   : 寻找图中是否存在路径 https://leetcode.cn/problems/redundant-connection/description/
+ * @note   : 冗余连接 https://leetcode.cn/problems/redundant-connection/description/
  * @date   : 2024/4/27 20
  *************************/
 

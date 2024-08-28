@@ -27,8 +27,9 @@ public:
         vector<vector<bool>> dp = vector(n + 1, vector<bool>(n + 1, false));
 
         int ret = 0;
-        for (int i = n - 1; i >= 0; --i) {  // note: 从后向前
+        for (int i = n - 1; i >= 0; --i) {  // TODO: 从后向前
             for (int j = i; j < n; ++j) {
+                // [0..i..j..n]
                 if (s[i] == s[j]) {  // i和j对应区间边界的元素相同
                     if (j - i <= 1) { // 区间有1个或者2个元素，可以【百分百确定是 回文串 的情况】
                         dp[i][j] = true;

@@ -17,7 +17,7 @@ public:
         int n = nums.size();
         if (n == 0) return 0;
         if (n == 1) return nums[0];
-        // dp[i]: 到 i之前的最大连续子序列和
+        // dp[i]: 到 i之前的最大【连续】子序列和
         vector<int> dp(n + 1, 0);
         dp[0] = nums[0];
 

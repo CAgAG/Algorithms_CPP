@@ -1,7 +1,7 @@
 /*************************
  * @file   : 22_subset_repeat.cpp
  * @encode : UTF-8
- * @note   : 最长公共子序列(不一定连续) https://leetcode.cn/problems/maximum-length-of-repeated-subarray/description/
+ * @note   : 最长公共子序列(不一定连续) https://leetcode.cn/problems/qJnOS7/description/
  * @date   : 2024/4/26 10
  *************************/
 

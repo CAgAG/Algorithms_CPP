@@ -45,7 +45,7 @@ private:
         int left = traversal(root->left);
         int right = traversal(root->right);
 
-        // 左右节点都有覆盖  ==> 叶子节点以下的空节点
+        // 左右节点都有覆盖  ==> 叶子节点以下的空节点，假设这个空节点之下一定有监控
         if (left == 2 && right == 2) {
             // 等父节点的父节点来放摄像头  ==> 隔两个空节点放一个摄像头
             return 0;

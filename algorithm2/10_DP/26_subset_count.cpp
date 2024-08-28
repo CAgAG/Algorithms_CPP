@@ -17,12 +17,13 @@ class Solution {
 public:
     int numDistinct(string s, string t) {
         int m = s.size(), n = t.size();
-        /* 定义为 dp[i][j] 为在s的前i个元素(即s[0, i - 1])中，有多少个t[0, j - 1]的匹配(以t[j - 1]为结尾)
+        /* 定义为 dp[i][j] 为在s的前i个元素(即s[i - 1])中，有多少个t[j - 1]的匹配(以t[j - 1]为结尾)
          * 假设 t="bag" 两种转移情况分别为:
          *  当此元素相等时, 则求s的前面有多少个"ba" + 前面有多少个完整"bag"
          *  若此元素不相等, 则求s的前面有多少个"bag"
          */
         vector<vector<uint64_t>> dp(m + 1, vector<uint64_t>(n + 1, 0));  // 使用 uint64_t 防止溢出
+        // 注意这个初始化
         for (int i = 0; i < m; ++i) {
             dp[i][0] = 1;
         }

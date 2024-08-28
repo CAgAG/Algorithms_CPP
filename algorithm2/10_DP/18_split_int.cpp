@@ -15,7 +15,6 @@ using namespace std;
 class Solution {
 public:
     int integerBreak(int n) {
-
         // dp[j] 到j的最大乘积和
         vector<int> dp(n + 1, 0);
         dp[0] = 0;

@@ -60,7 +60,7 @@ public:
 };
 
 int main() {
-    vector<int> nums = {1, 1, 1, 1, 1};
+    vector<int> nums = {1, 1, 1, 1, 1};  // 非负整数数组
 
     Solution so;
     cout << so.findTargetSumWays(nums, 3) << endl;

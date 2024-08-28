@@ -43,7 +43,7 @@ public:
                 while (cur_node != nullptr && cur_node->val == pre_node->val) {
                     cur_node = cur_node->next;
                 }
-                // 0(pre_pre_node), 1(pre_node), 1, cur_node(2)
+                // 0(pre_pre_node), 1(pre_node), 1, cur_node(2)  ==> 移除重复的 pre_node部分
                 pre_pre_node->next = cur_node;
                 pre_node = pre_pre_node;
                 continue;

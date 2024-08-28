@@ -12,6 +12,8 @@
 
 using namespace std;
 
+// 两个以 非递减顺序排列 的整数数组 nums1 和 nums2
+
 class Solution {
 public:
     // 输入的数组是有序的

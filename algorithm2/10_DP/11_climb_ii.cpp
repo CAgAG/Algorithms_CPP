@@ -12,6 +12,7 @@
 using namespace std;
 
 // 1阶，2阶，.... m阶就是物品，楼顶n就是背包。
+// m步
 int main() {
     int n, m;
     while (cin >> n >> m) {
@@ -20,7 +21,7 @@ int main() {
         dp[0] = 1;
 
         for (int j = 1; j <= bag_weight; ++j) {
-            for (int i = 1; i <= m; ++i) {
+            for (int i = 1; i <= m; ++i) {  // 最多 m步
                 if (j - i >= 0) {
                     dp[j] = dp[j] + dp[j - i];
                 }

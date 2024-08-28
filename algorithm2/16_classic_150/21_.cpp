@@ -21,7 +21,6 @@ public:
     map<string, bool> visited;
 
     bool wordPattern(string pattern, string s) {
-
         int n = pattern.size();
         int cur_s_i = 0;
         for (int i = 0; i < n; ++i) {

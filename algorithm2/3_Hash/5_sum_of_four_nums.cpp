@@ -5,6 +5,8 @@
  * @date   : 2024/3/2 11
  *************************/
 
+// nums1[i] + nums2[j] + nums3[k] + nums4[l] == 0
+
 #include "iostream"
 #include "unordered_map"
 #include "vector"
